@@ -5,7 +5,7 @@ local HttpService = game:GetService("HttpService")
 local Player = Players.LocalPlayer
 
 -- PASTE YOUR JSON HERE (between the [[ ]] brackets)
-{
+local preloadedJSON = [[{
 	"JohnDoe": [
 		{"Id":"83251433279852","Name":"rbxassetid://83251433279852"},
 		{"Id":"95716232259748","Name":"rbxassetid://95716232259748"},
@@ -294,7 +294,7 @@ local Player = Players.LocalPlayer
 		{"Id":"119181003138006","Name":"rbxassetid://119181003138006"},
 		{"Id":"123924093489218","Name":"rbxassetid://123924093489218"}
 	]
-}
+}]]
 
 -- Storage for animations
 local savedAnimations = {} -- {["CharacterName"] = {{Id, Name}, ...}}
