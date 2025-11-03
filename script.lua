@@ -5,7 +5,7 @@ local HttpService = game:GetService("HttpService")
 local Player = Players.LocalPlayer
 
 -- PASTE YOUR JSON HERE (between the [[ ]] brackets)
-local preloadedJSON = [[{
+{
 	"JohnDoe": [
 		{"Id":"83251433279852","Name":"rbxassetid://83251433279852"},
 		{"Id":"95716232259748","Name":"rbxassetid://95716232259748"},
@@ -294,7 +294,7 @@ local preloadedJSON = [[{
 		{"Id":"119181003138006","Name":"rbxassetid://119181003138006"},
 		{"Id":"123924093489218","Name":"rbxassetid://123924093489218"}
 	]
-}]]
+}
 
 -- Storage for animations
 local savedAnimations = {} -- {["CharacterName"] = {{Id, Name}, ...}}
@@ -308,8 +308,8 @@ local Humanoid
 local Animator
 
 print("=== FORSAKEN ANIMATION TESTER ===")
-print("Press [M] to switch to next character's animations")
-print("Press [N] to switch to previous character's animations")
+print("Press [B] to switch to next character's animations")
+print("Press [V] to switch to previous character's animations")
 print("Press [K] to play next animation")
 print("Press [J] to play previous animation")
 print("Press [R] to manually save current character's animations")
@@ -541,9 +541,9 @@ end
 UserInputService.InputBegan:Connect(function(input, gameProcessed)
     if gameProcessed then return end
     
-    if input.KeyCode == Enum.KeyCode.M then
+    if input.KeyCode == Enum.KeyCode.B then
         switchCharacter(1) -- Next character
-    elseif input.KeyCode == Enum.KeyCode.N then
+    elseif input.KeyCode == Enum.KeyCode.V then
         switchCharacter(-1) -- Previous character
     elseif input.KeyCode == Enum.KeyCode.K then
         playAnimation(currentAnimIndex + 1) -- Next animation
