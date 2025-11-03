@@ -425,9 +425,6 @@ local function switchCharacter(direction)
     -- Load this character's animations
     if loadAnimationsToCharacter() then
         currentAnimIndex = 1
-        if #animationList > 0 then
-            playAnimation(1)
-        end
     end
 end
 
